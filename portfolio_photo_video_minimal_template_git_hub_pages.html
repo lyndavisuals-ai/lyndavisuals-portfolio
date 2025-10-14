@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lyndavisuals — Photographe & Vidéaste</title>
+  <meta name="description" content="Portfolio de Lyndavisuals — photographe et vidéaste sport, streetwear et événementiel, basée à Paris." />
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" href="favicon.ico" />
+  <meta property="og:title" content="Lyndavisuals — Photographe & Vidéaste" />
+  <meta property="og:description" content="Portfolio minimaliste de Lyndavisuals : photo et vidéo dans les univers sport, streetwear et événementiel." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://votre-domaine.com" />
+  <meta property="og:image" content="/assets/og-cover.jpg" />
+  <style>
+    :root { --bg:#fff; --text:#0a0a0a; --muted:#6b7280; --link:#111827; --grid-gap:clamp(.75rem,1.5vw,1.25rem); --maxw:1200px; }
+    @media (prefers-color-scheme: dark){ :root{ --bg:#0b0b0c; --text:#e6e6e6; --muted:#9ca3af; --link:#e5e7eb; } }
+    *{ box-sizing:border-box }
+    html,body{ height:100% }
+    body{ margin:0; font-family:system-ui, sans-serif; background:var(--bg); color:var(--text); line-height:1.6 }
+    a{ color:var(--link); text-decoration:none }
+    a:hover{ text-decoration:underline }
+    .container{ max-width:var(--maxw); margin:0 auto; padding:2rem 1rem }
+    header{ position:sticky; top:0; backdrop-filter:blur(6px); background: color-mix(in oklab, var(--bg) 85%, transparent); border-bottom:1px solid color-mix(in oklab, var(--text) 10%, transparent); z-index:10 }
+    .nav{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.75rem 1rem; max-width:var(--maxw); margin:0 auto }
+    .brand{ font-weight:600 }
+    .brand small{ color:var(--muted) }
+    nav a{ margin-left:1rem; font-size:.95rem }
+    .hero{ padding:clamp(1.5rem,6vw,3.5rem) 1rem }
+    .hero h1{ font-size:clamp(1.75rem,5vw,3rem); line-height:1.15; margin:0 0 .5rem; font-weight:600 }
+    .hero p{ max-width:60ch; color:var(--muted); margin:.25rem 0 0 }
+    .cta-row{ display:flex; gap:.6rem; flex-wrap:wrap; margin-top:1rem }
+    .btn{ display:inline-block; padding:.7rem 1rem; border-radius:999px; border:1px solid color-mix(in oklab, var(--text) 18%, transparent) }
+    .grid{ display:grid; grid-template-columns:repeat(12,1fr); gap:var(--grid-gap) }
+    .card{ grid-column:span 12; position:relative; overflow:hidden; border-radius:14px; border:1px solid color-mix(in oklab, var(--text) 9%, transparent) }
+    .thumb{ position:relative }
+    .thumb img{ width:100%; height:auto; display:block; aspect-ratio:4/3; object-fit:cover; user-select:none; -webkit-user-drag:none; pointer-events:none }
+    .overlay-link{ position:absolute; inset:0; display:block }
+    .caption{ position:absolute; bottom:0; width:100%; padding:.75rem .9rem; font-size:.95rem; color:#fff; background:linear-gradient(to top, rgba(0,0,0,.55), transparent 65%); opacity:0; transform:translateY(4px); transition:.25s ease }
+    .card:hover .caption{ opacity:1; transform:translateY(0) }
+    @media (min-width:640px){ .card.sm-6{ grid-column:span 6 } .card.sm-4{ grid-column:span 4 } .card.sm-8{ grid-column:span 8 } }
+    footer{ border-top:1px solid color-mix(in oklab, var(--text) 10%, transparent); margin-top:2rem }
+    .foot{ display:flex; justify-content:space-between; padding:1.25rem 1rem; max-width:var(--maxw); margin:0 auto; font-size:.95rem; color:var(--muted) }
+    /* Lightbox */
+    .lightbox{ position:fixed; inset:0; background:rgba(0,0,0,.9); display:none; align-items:center; justify-content:center; z-index:50 }
+    .lightbox.open{ display:flex }
+    .lightbox img{ max-width:92vw; max-height:88vh; object-fit:contain; box-shadow:0 10px 40px rgba(0,0,0,.6); user-select:none; -webkit-user-drag:none }
+    .lightbox button{ position:absolute; top:1rem; right:1rem; border:0; background:transparent; color:#fff; font-size:2rem; cursor:pointer }
+  </style>
+</head>
+<body oncontextmenu="return false">
+  <header>
+    <div class="nav">
+      <a class="brand" href="#top">Lyndavisuals <small>— Photo & Vidéo</small></a>
+      <nav>
+        <a href="evenementiel.html">Événementiel</a>
+        <a href="sport.html">Sport</a>
+        <a href="streetwear.html">Streetwear</a>
+        <a href="clients.html">Sélection clients</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero container">
+      <span class="btn" aria-hidden="true">Reel 2025</span>
+      <h1>Photographe & vidéaste — univers sport, streetwear & événementiel.</h1>
+      <p>Basée à Paris (Île-de-France). Je capture l’énergie du mouvement, les ambiances urbaines et l’intensité des événements avec une esthétique minimaliste et authentique.</p>
+      <div class="cta-row">
+        <a class="btn" href="#reel">Voir le reel</a>
+        <a class="btn" href="evenementiel.html">Événementiel</a>
+        <a class="btn" href="sport.html">Sport</a>
+        <a class="btn" href="streetwear.html">Streetwear</a>
+      </div>
+    </section>
+
+    <section id="works" class="section container">
+      <h2>Sélection photo</h2>
+      <div class="grid">
+        <figure class="card sm-8 thumb" data-full="assets/photo-01@2x.jpg"><img src="assets/photo-01.jpg" alt="Série A — Sport" loading="lazy" decoding="async" /><a class="overlay-link" href="#" aria-label="Ouvrir l'image en grand"></a><figcaption class="caption">Série A — Sport</figcaption></figure>
+        <figure class="card sm-4 thumb" data-full="assets/photo-02@2x.jpg"><img src="assets/photo-02.jpg" alt="Série B — Streetwear" loading="lazy" decoding="async" /><a class="overlay-link" href="#" aria-label="Ouvrir l'image en grand"></a><figcaption class="caption">Série B — Streetwear</figcaption></figure>
+        <figure class="card sm-6 thumb" data-full="assets/photo-03@2x.jpg"><img src="assets/photo-03.jpg" alt="Série C — Événementiel" loading="lazy" decoding="async" /><a class="overlay-link" href="#" aria-label="Ouvrir l'image en grand"></a><figcaption class="caption">Série C — Événementiel</figcaption></figure>
+        <figure class="card sm-6 thumb" data-full="assets/photo-04@2x.jpg"><img src="assets/photo-04.jpg" alt="Série D — Portraits" loading="lazy" decoding="async" /><a class="overlay-link" href="#" aria-label="Ouvrir l'image en grand"></a><figcaption class="caption">Série D — Portraits</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="reel" class="section container">
+      <h2>Reel</h2>
+      <div class="grid">
+        <div class="card sm-12" style="aspect-ratio:16/9">
+          <iframe loading="lazy" src="https://player.vimeo.com/video/76979871" title="Reel Lyndavisuals" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" style="width:100%; height:100%"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section container" aria-labelledby="t-contact">
+      <h2 id="t-contact">Me contacter</h2>
+      <p class="hint">Email direct : <a href="mailto:lyndavisuals@gmail.com">lyndavisuals@gmail.com</a> — ou utilisez le formulaire.</p>
+      <form id="contact-form" action="https://formspree.io/f/XXXXXXXX" method="POST" novalidate>
+        <div class="grid" style="grid-template-columns:1fr 1fr; gap:var(--grid-gap)">
+          <label>Nom<input type="text" name="name" autocomplete="name" required aria-required="true" /></label>
+          <label>Email<input type="email" name="_replyto" inputmode="email" autocomplete="email" required aria-required="true" /></label>
+        </div>
+        <label>Objet<input type="text" name="subject" required aria-required="true" /></label>
+        <label>Message<textarea name="message" rows="6" required aria-required="true"></textarea></label>
+        <input type="text" name="_gotcha" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <input type="hidden" name="source" value="portfolio-lyndavisuals" />
+        <button type="submit">Envoyer</button>
+        <p id="form-status" class="status" role="status" aria-live="polite"></p>
+      </form>
+      <p>Réseaux : <a href="https://www.instagram.com/lyndavisuals?igsh=YTZwaTI2dGNlcXFw" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.linkedin.com/in/lynda-atek-b33207290?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://www.facebook.com/share/1NtZJ6AAtg/" target="_blank" rel="noopener">Facebook</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot">
+      <span>© <span id="year"></span> Lyndavisuals · <a href="mentions.html">Mentions légales</a></span>
+      <a href="#top">Haut ↑</a>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-modal="true" role="dialog">
+    <button type="button" aria-label="Fermer">×</button>
+    <img alt="Aperçu" src="" />
+  </div>
+
+  <script>
+    // Année dynamique
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Lightbox (sans dépendance)
+    const lb = document.getElementById('lightbox');
+    const lbImg = lb.querySelector('img');
+    function openLB(src){ lbImg.src = src; lb.classList.add('open'); document.body.style.overflow='hidden'; }
+    function closeLB(){ lb.classList.remove('open'); lbImg.src=''; document.body.style.overflow=''; }
+    lb.addEventListener('click', (e)=>{ if(e.target===lb || e.target.tagName==='BUTTON') closeLB(); });
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeLB(); });
+    document.querySelectorAll('.thumb .overlay-link').forEach(a=>{
+      a.addEventListener('click', (e)=>{ e.preventDefault(); const fig=e.currentTarget.closest('.thumb'); const full=fig?.dataset.full||fig?.querySelector('img')?.src; if(full) openLB(full); });
+    });
+
+    // Dissuasion téléchargement (non infaillible)
+    document.addEventListener('dragstart', e=> e.preventDefault());
+    document.addEventListener('keydown', e=>{ if((e.ctrlKey||e.metaKey) && (e.key==='s' || e.key==='p')) e.preventDefault(); });
+
+    // Formulaire async
+    const form = document.getElementById('contact-form');
+    const statusEl = document.getElementById('form-status');
+    function validate(form){
+      let ok = true;
+      for(const el of form.querySelectorAll('[required]')){
+        if(!el.value.trim()) ok = false;
+        if(el.type === 'email' && el.value){ ok = /.+@.+\..+/.test(el.value) && ok; }
+      }
+      return ok;
+    }
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault(); statusEl.textContent='';
+      if(!validate(form)){ statusEl.textContent='Merci de remplir tous les champs requis.'; statusEl.className='status err'; return; }
+      const data = new FormData(form);
+      try{
+        const res = await fetch(form.action, { method:'POST', body:data, headers:{ 'Accept':'application/json' } });
+        if(res.ok){ form.reset(); statusEl.textContent='Merci ! Votre message a bien été envoyé.'; statusEl.className='status ok'; }
+        else { statusEl.textContent="Un problème est survenu. Écrivez à lyndavisuals@gmail.com"; statusEl.className='status err'; }
+      }catch(err){ statusEl.textContent="Impossible d'envoyer hors‑ligne. Écrivez à lyndavisuals@gmail.com."; statusEl.className='status err'; }
+    });
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Lyndavisuals","jobTitle":"Photographe & Vidéaste","url":"https://votre-domaine.com","sameAs":["https://www.instagram.com/lyndavisuals","https://www.linkedin.com/in/lynda-atek-b33207290","https://www.facebook.com/"],"worksFor":{"@type":"Organization","name":"Lyndavisuals"},"address":{"@type":"PostalAddress","addressLocality":"Paris","addressCountry":"FR"},"areaServed":"France"}
+  </script>
+</body>
+</html>
