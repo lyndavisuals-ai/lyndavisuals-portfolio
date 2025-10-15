@@ -3,172 +3,175 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lyndavisuals — Photographe & Vidéaste</title>
-  <meta name="description" content="Portfolio de Lyndavisuals — photographe et vidéaste sport, streetwear et événementiel, basée à Paris." />
-  <meta name="robots" content="index,follow" />
+  <title>Lyndavisuals — Accueil</title>
+  <meta name="description" content="Lyndavisuals — photographe & vidéaste. Univers sport, streetwear, événementiel. Reels punchy et storytelling soigné." />
   <link rel="icon" href="favicon.ico" />
-  <meta property="og:title" content="Lyndavisuals — Photographe & Vidéaste" />
-  <meta property="og:description" content="Portfolio minimaliste de Lyndavisuals : photo et vidéo dans les univers sport, streetwear et événementiel." />
+  <meta property="og:title" content="Lyndavisuals — Accueil" />
+  <meta property="og:description" content="Photographe & vidéaste — sport, streetwear, événementiel. Découvrez mes derniers projets." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://votre-domaine.com" />
   <meta property="og:image" content="/assets/og-cover.jpg" />
   <style>
-    :root { --bg:#fff; --text:#0a0a0a; --muted:#6b7280; --link:#111827; --grid-gap:clamp(.75rem,1.5vw,1.25rem); --maxw:1200px; }
-    @media (prefers-color-scheme: dark){ :root{ --bg:#0b0b0c; --text:#e6e6e6; --muted:#9ca3af; --link:#e5e7eb; } }
+    :root{ --bg:#ffffff; --text:#000000; --muted:#6b6b6b; --gap:clamp(.75rem,1.5vw,1.25rem); --maxw:1200px; }
     *{ box-sizing:border-box }
     html,body{ height:100% }
-    body{ margin:0; font-family:system-ui, sans-serif; background:var(--bg); color:var(--text); line-height:1.6 }
-    a{ color:var(--link); text-decoration:none }
+    body{ margin:0; font-family: Helvetica, Arial, sans-serif; background:var(--bg); color:var(--text); line-height:1.6 }
+    a{ color:var(--text); text-decoration:none }
     a:hover{ text-decoration:underline }
     .container{ max-width:var(--maxw); margin:0 auto; padding:2rem 1rem }
-    header{ position:sticky; top:0; backdrop-filter:blur(6px); background: color-mix(in oklab, var(--bg) 85%, transparent); border-bottom:1px solid color-mix(in oklab, var(--text) 10%, transparent); z-index:10 }
-    .nav{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.75rem 1rem; max-width:var(--maxw); margin:0 auto }
-    .brand{ font-weight:600 }
-    .brand small{ color:var(--muted) }
+    header{ position:sticky; top:0; background:#fff; border-bottom:1px solid #e5e5e5; z-index:10; backdrop-filter: blur(6px) }
+    .nav{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.9rem 1rem; max-width:var(--maxw); margin:0 auto }
+    .brand{ font-weight:700; letter-spacing:.02em }
     nav a{ margin-left:1rem; font-size:.95rem }
-    .hero{ padding:clamp(1.5rem,6vw,3.5rem) 1rem }
-    .hero h1{ font-size:clamp(1.75rem,5vw,3rem); line-height:1.15; margin:0 0 .5rem; font-weight:600 }
-    .hero p{ max-width:60ch; color:var(--muted); margin:.25rem 0 0 }
-    .cta-row{ display:flex; gap:.6rem; flex-wrap:wrap; margin-top:1rem }
-    .btn{ display:inline-block; padding:.7rem 1rem; border-radius:999px; border:1px solid color-mix(in oklab, var(--text) 18%, transparent) }
-    .grid{ display:grid; grid-template-columns:repeat(12,1fr); gap:var(--grid-gap) }
-    .card{ grid-column:span 12; position:relative; overflow:hidden; border-radius:14px; border:1px solid color-mix(in oklab, var(--text) 9%, transparent) }
-    .thumb{ position:relative }
-    .thumb img{ width:100%; height:auto; display:block; aspect-ratio:4/3; object-fit:cover; user-select:none; -webkit-user-drag:none; pointer-events:none }
-    .overlay-link{ position:absolute; inset:0; display:block }
-    .caption{ position:absolute; bottom:0; width:100%; padding:.75rem .9rem; font-size:.95rem; color:#fff; background:linear-gradient(to top, rgba(0,0,0,.55), transparent 65%); opacity:0; transform:translateY(4px); transition:.25s ease }
-    .card:hover .caption{ opacity:1; transform:translateY(0) }
-    @media (min-width:640px){ .card.sm-6{ grid-column:span 6 } .card.sm-4{ grid-column:span 4 } .card.sm-8{ grid-column:span 8 } }
-    footer{ border-top:1px solid color-mix(in oklab, var(--text) 10%, transparent); margin-top:2rem }
-    .foot{ display:flex; justify-content:space-between; padding:1.25rem 1rem; max-width:var(--maxw); margin:0 auto; font-size:.95rem; color:var(--muted) }
-    /* Lightbox */
-    .lightbox{ position:fixed; inset:0; background:rgba(0,0,0,.9); display:none; align-items:center; justify-content:center; z-index:50 }
-    .lightbox.open{ display:flex }
-    .lightbox img{ max-width:92vw; max-height:88vh; object-fit:contain; box-shadow:0 10px 40px rgba(0,0,0,.6); user-select:none; -webkit-user-drag:none }
-    .lightbox button{ position:absolute; top:1rem; right:1rem; border:0; background:transparent; color:#fff; font-size:2rem; cursor:pointer }
+    .hero{ padding:clamp(2rem,6vw,4rem) 1rem }
+    .hero h1{ font-size:clamp(1.8rem,5vw,3rem); line-height:1.15; margin:0 0 .5rem; font-weight:700 }
+    .muted{ color:var(--muted) }
+
+    /* Grid */
+    .grid{ display:grid; grid-template-columns: repeat(12, 1fr); gap:var(--gap) }
+    .g-12{ grid-column: span 12 }
+    @media (min-width:640px){ .sm-6{ grid-column: span 6 } .sm-4{ grid-column: span 4 } }
+    .card{ position:relative; border:1px solid #eaeaea; border-radius:14px; overflow:hidden; background:#fff }
+    .thumb{ width:100%; aspect-ratio:4/3; object-fit:cover; display:block; -webkit-user-drag:none; user-drag:none; pointer-events:none }
+    .cap{ position:absolute; inset:auto 0 0 0; padding:.65rem .9rem; background: linear-gradient(to top, rgba(0,0,0,.55), transparent 65%); color:#fff; font-size:.95rem }
+
+    /* Sections */
+    section h2{ font-size:clamp(1.2rem,3.4vw,1.8rem); margin:0 0 .75rem; font-weight:700 }
+
+    /* Contact form minimal B/W */
+    form{ display:grid; gap:1rem; max-width:680px }
+    .row{ display:grid; gap:1rem; grid-template-columns:1fr }
+    @media (min-width:640px){ .row{ grid-template-columns:1fr 1fr } }
+    label{ display:grid; gap:.35rem; font-size:.95rem }
+    input, textarea{ width:100%; padding:.85rem 1rem; border-radius:10px; border:1px solid #e5e5e5; background:#fff; color:#000 }
+    input:focus, textarea:focus{ outline:2px solid #000 }
+    button{ appearance:none; border:1px solid #000; background:#000; color:#fff; padding:.9rem 1.2rem; border-radius:999px; cursor:pointer; font-weight:700 }
+    button:hover{ background:#111 }
+    .status{ font-size:.95rem }
+    .ok{ color:#0a7a2f } .err{ color:#b00020 }
+
+    footer{ border-top:1px solid #e5e5e5; margin-top:2rem }
+    .foot{ display:flex; justify-content:space-between; align-items:center; gap:1rem; padding:1.25rem 1rem; max-width:var(--maxw); margin:0 auto; font-size:.95rem; color:#333 }
+
+    /* Utilities */
+    .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0 }
   </style>
 </head>
-<body oncontextmenu="return false">
+<body>
   <header>
-    <div class="nav">
-      <a class="brand" href="#top">Lyndavisuals <small>— Photo & Vidéo</small></a>
+    <div class="nav" role="navigation" aria-label="Navigation principale">
+      <a class="brand" href="index.html">Lyndavisuals</a>
       <nav>
-        <a href="evenementiel.html">Événementiel</a>
-        <a href="sport.html">Sport</a>
-        <a href="streetwear.html">Streetwear</a>
-        <a href="clients.html">Sélection clients</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html" aria-current="page" style="font-weight:700;">Accueil</a>
+        <a href="mes-projets.html">Mes projets</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero container">
-      <span class="btn" aria-hidden="true">Reel 2025</span>
-      <h1>Photographe & vidéaste — univers sport, streetwear & événementiel.</h1>
-      <p>Basée à Paris (Île-de-France). Je capture l’énergie du mouvement, les ambiances urbaines et l’intensité des événements avec une esthétique minimaliste et authentique.</p>
-      <div class="cta-row">
-        <a class="btn" href="#reel">Voir le reel</a>
-        <a class="btn" href="evenementiel.html">Événementiel</a>
-        <a class="btn" href="sport.html">Sport</a>
-        <a class="btn" href="streetwear.html">Streetwear</a>
-      </div>
-    </section>
-
-    <section id="works" class="section container">
-      <h2>Sélection photo</h2>
+  <main>
+    <!-- HERO / QUI SUIS‑JE -->
+    <section class="hero container" aria-labelledby="qui">
       <div class="grid">
-        <figure class="card sm-8 thumb" data-full="assets/photo-01@2x.jpg"><img src="assets/photo-01.jpg" alt="Série A — Sport" loading="lazy" decoding="async" /><a class="overlay-link" href="#" aria-label="Ouvrir l'image en grand"></a><figcaption class="caption">Série A — Sport</figcaption></figure>
-        <figure class="card sm-4 thumb" data-full="assets/photo-02@2x.jpg"><img src="assets/photo-02.jpg" alt="Série B — Streetwear" loading="lazy" decoding="async" /><a class="overlay-link" href="#" aria-label="Ouvrir l'image en grand"></a><figcaption class="caption">Série B — Streetwear</figcaption></figure>
-        <figure class="card sm-6 thumb" data-full="assets/photo-03@2x.jpg"><img src="assets/photo-03.jpg" alt="Série C — Événementiel" loading="lazy" decoding="async" /><a class="overlay-link" href="#" aria-label="Ouvrir l'image en grand"></a><figcaption class="caption">Série C — Événementiel</figcaption></figure>
-        <figure class="card sm-6 thumb" data-full="assets/photo-04@2x.jpg"><img src="assets/photo-04.jpg" alt="Série D — Portraits" loading="lazy" decoding="async" /><a class="overlay-link" href="#" aria-label="Ouvrir l'image en grand"></a><figcaption class="caption">Série D — Portraits</figcaption></figure>
-      </div>
-    </section>
-
-    <section id="reel" class="section container">
-      <h2>Reel</h2>
-      <div class="grid">
-        <div class="card sm-12" style="aspect-ratio:16/9">
-          <iframe loading="lazy" src="https://player.vimeo.com/video/76979871" title="Reel Lyndavisuals" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" style="width:100%; height:100%"></iframe>
+        <div class="g-12 sm-6">
+          <h1 id="qui">Qui suis‑je</h1>
+          <p>Je suis <strong>Lyndavisuals</strong>, photographe et vidéaste depuis 2 ans, spécialisée dans les univers <strong>sport</strong>, <strong>streetwear</strong> et <strong>événementiel</strong>. Je réalise des <strong>reels punchy</strong>, je fais très attention aux détails et je cherche toujours la meilleure façon de <strong>raconter une histoire</strong>. J’ai réalisé de nombreuses vidéos et photos pour des <strong>danseurs</strong>.</p>
         </div>
+        <figure class="g-12 sm-6 card" style="align-self:start;">
+          <img class="thumb" src="assets/portrait.jpg" alt="Portrait de Lyndavisuals" loading="lazy" decoding="async" style="aspect-ratio:3/4; object-position:center;" />
+        </figure>
       </div>
     </section>
 
-    <section id="contact" class="section container" aria-labelledby="t-contact">
+    <!-- MES DERNIERS PROJETS (4 covers qui mènent à Mes projets) -->
+    <section class="container" aria-labelledby="last">
+      <h2 id="last">Mes derniers projets</h2>
+      <div class="grid">
+        <a class="card g-12 sm-6" href="mes-projets.html#projet-1" aria-label="Voir projet 1">
+          <img class="thumb" src="assets/cover-projet-1.jpg" alt="Couverture projet 1" loading="lazy" decoding="async" />
+          <span class="cap">Projet 1</span>
+        </a>
+        <a class="card g-12 sm-6" href="mes-projets.html#projet-2" aria-label="Voir projet 2">
+          <img class="thumb" src="assets/cover-projet-2.jpg" alt="Couverture projet 2" loading="lazy" decoding="async" />
+          <span class="cap">Projet 2</span>
+        </a>
+        <a class="card g-12 sm-6" href="mes-projets.html#projet-3" aria-label="Voir projet 3">
+          <img class="thumb" src="assets/cover-projet-3.jpg" alt="Couverture projet 3" loading="lazy" decoding="async" />
+          <span class="cap">Projet 3</span>
+        </a>
+        <a class="card g-12 sm-6" href="mes-projets.html#projet-4" aria-label="Voir projet 4">
+          <img class="thumb" src="assets/cover-projet-4.jpg" alt="Couverture projet 4" loading="lazy" decoding="async" />
+          <span class="cap">Projet 4</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTACT (formulaire en bas de la page d'accueil) -->
+    <section class="container" id="contact" aria-labelledby="t-contact">
       <h2 id="t-contact">Me contacter</h2>
-      <p class="hint">Email direct : <a href="mailto:lyndavisuals@gmail.com">lyndavisuals@gmail.com</a> — ou utilisez le formulaire.</p>
+      <p class="muted">Un projet en tête ? Écrivez-moi directement à <a href="mailto:lyndavisuals@gmail.com">lyndavisuals@gmail.com</a> ou utilisez le formulaire.</p>
       <form id="contact-form" action="https://formspree.io/f/XXXXXXXX" method="POST" novalidate>
-        <div class="grid" style="grid-template-columns:1fr 1fr; gap:var(--grid-gap)">
-          <label>Nom<input type="text" name="name" autocomplete="name" required aria-required="true" /></label>
-          <label>Email<input type="email" name="_replyto" inputmode="email" autocomplete="email" required aria-required="true" /></label>
+        <div class="row">
+          <label>Nom
+            <input type="text" name="name" autocomplete="name" required aria-required="true" />
+          </label>
+          <label>Email
+            <input type="email" name="_replyto" inputmode="email" autocomplete="email" required aria-required="true" />
+          </label>
         </div>
-        <label>Objet<input type="text" name="subject" required aria-required="true" /></label>
-        <label>Message<textarea name="message" rows="6" required aria-required="true"></textarea></label>
+        <label>Objet
+          <input type="text" name="subject" required aria-required="true" />
+        </label>
+        <label>Message
+          <textarea name="message" rows="6" required aria-required="true"></textarea>
+        </label>
         <input type="text" name="_gotcha" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true" />
-        <input type="hidden" name="source" value="portfolio-lyndavisuals" />
+        <input type="hidden" name="source" value="accueil-index" />
         <button type="submit">Envoyer</button>
         <p id="form-status" class="status" role="status" aria-live="polite"></p>
       </form>
-      <p>Réseaux : <a href="https://www.instagram.com/lyndavisuals?igsh=YTZwaTI2dGNlcXFw" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.linkedin.com/in/lynda-atek-b33207290?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://www.facebook.com/share/1NtZJ6AAtg/" target="_blank" rel="noopener">Facebook</a></p>
     </section>
   </main>
 
   <footer>
     <div class="foot">
-      <span>© <span id="year"></span> Lyndavisuals · <a href="mentions.html">Mentions légales</a></span>
-      <a href="#top">Haut ↑</a>
+      <span>© <span id="year"></span> Lyndavisuals</span>
+      <span>
+        <a href="mes-projets.html">Mes projets</a> ·
+        <a href="contact.html">Contact</a>
+      </span>
     </div>
   </footer>
-
-  <div class="lightbox" id="lightbox" aria-modal="true" role="dialog">
-    <button type="button" aria-label="Fermer">×</button>
-    <img alt="Aperçu" src="" />
-  </div>
 
   <script>
     // Année dynamique
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Lightbox (sans dépendance)
-    const lb = document.getElementById('lightbox');
-    const lbImg = lb.querySelector('img');
-    function openLB(src){ lbImg.src = src; lb.classList.add('open'); document.body.style.overflow='hidden'; }
-    function closeLB(){ lb.classList.remove('open'); lbImg.src=''; document.body.style.overflow=''; }
-    lb.addEventListener('click', (e)=>{ if(e.target===lb || e.target.tagName==='BUTTON') closeLB(); });
-    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeLB(); });
-    document.querySelectorAll('.thumb .overlay-link').forEach(a=>{
-      a.addEventListener('click', (e)=>{ e.preventDefault(); const fig=e.currentTarget.closest('.thumb'); const full=fig?.dataset.full||fig?.querySelector('img')?.src; if(full) openLB(full); });
-    });
-
-    // Dissuasion téléchargement (non infaillible)
-    document.addEventListener('dragstart', e=> e.preventDefault());
-    document.addEventListener('keydown', e=>{ if((e.ctrlKey||e.metaKey) && (e.key==='s' || e.key==='p')) e.preventDefault(); });
-
-    // Formulaire async
+    // Envoi asynchrone du formulaire
     const form = document.getElementById('contact-form');
     const statusEl = document.getElementById('form-status');
-    function validate(form){
+    function validate(f){
       let ok = true;
-      for(const el of form.querySelectorAll('[required]')){
-        if(!el.value.trim()) ok = false;
-        if(el.type === 'email' && el.value){ ok = /.+@.+\..+/.test(el.value) && ok; }
+      for(const el of f.querySelectorAll('[required]')){
+        if(!el.value.trim()) ok=false;
+        if(el.type==='email' && el.value){ ok = /.+@.+\..+/.test(el.value) && ok; }
       }
       return ok;
     }
-    form?.addEventListener('submit', async (e) => {
-      e.preventDefault(); statusEl.textContent='';
-      if(!validate(form)){ statusEl.textContent='Merci de remplir tous les champs requis.'; statusEl.className='status err'; return; }
+    form?.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      statusEl.textContent='';
+      if(!validate(form)){
+        statusEl.textContent='Merci de remplir tous les champs requis.';
+        statusEl.className='status err';
+        return;
+      }
       const data = new FormData(form);
       try{
-        const res = await fetch(form.action, { method:'POST', body:data, headers:{ 'Accept':'application/json' } });
+        const res = await fetch(form.action,{ method:'POST', body:data, headers:{ 'Accept':'application/json' } });
         if(res.ok){ form.reset(); statusEl.textContent='Merci ! Votre message a bien été envoyé.'; statusEl.className='status ok'; }
-        else { statusEl.textContent="Un problème est survenu. Écrivez à lyndavisuals@gmail.com"; statusEl.className='status err'; }
-      }catch(err){ statusEl.textContent="Impossible d'envoyer hors‑ligne. Écrivez à lyndavisuals@gmail.com."; statusEl.className='status err'; }
+        else { statusEl.textContent="Un problème est survenu. Vous pouvez m'écrire à lyndavisuals@gmail.com"; statusEl.className='status err'; }
+      }catch(err){ statusEl.textContent="Impossible d'envoyer le message hors‑ligne. Réessayez ou écrivez à lyndavisuals@gmail.com."; statusEl.className='status err'; }
     });
-  </script>
-
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Person","name":"Lyndavisuals","jobTitle":"Photographe & Vidéaste","url":"https://votre-domaine.com","sameAs":["https://www.instagram.com/lyndavisuals","https://www.linkedin.com/in/lynda-atek-b33207290","https://www.facebook.com/"],"worksFor":{"@type":"Organization","name":"Lyndavisuals"},"address":{"@type":"PostalAddress","addressLocality":"Paris","addressCountry":"FR"},"areaServed":"France"}
   </script>
 </body>
 </html>
