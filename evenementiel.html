@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Événementiel — Lyndavisuals</title>
+  <meta name="description" content="Événementiel — Sélection de projets par Lyndavisuals. Rubrique : ADIDAS — Believe That (photos & vidéo)." />
+  <link rel="icon" href="favicon.ico" />
+  <meta property="og:title" content="Événementiel — Lyndavisuals" />
+  <meta property="og:description" content="Projet ADIDAS — Believe That : série photo et vidéo par Lyndavisuals." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/og-cover.jpg" />
+  <style>
+    :root { --bg:#fff; --text:#0a0a0a; --muted:#6b7280; --link:#111827; --grid-gap:clamp(.75rem,1.5vw,1.25rem); --maxw:1200px; }
+    @media (prefers-color-scheme: dark){ :root{ --bg:#0b0b0c; --text:#e6e6e6; --muted:#9ca3af; --link:#e5e7eb; } }
+    *{ box-sizing:border-box }
+    body{ margin:0; font-family:system-ui, sans-serif; background:var(--bg); color:var(--text); line-height:1.6 }
+    a{ color:var(--link); text-decoration:none }
+    a:hover{ text-decoration:underline }
+    .container{ max-width:var(--maxw); margin:0 auto; padding:2rem 1rem }
+    header{ position:sticky; top:0; backdrop-filter:blur(6px); background: color-mix(in oklab, var(--bg) 85%, transparent); border-bottom:1px solid color-mix(in oklab, var(--text) 10%, transparent); z-index:10 }
+    .nav{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.75rem 1rem; max-width:var(--maxw); margin:0 auto }
+    .brand{ font-weight:600 }
+    .brand small{ color:var(--muted) }
+    nav a{ margin-left:1rem; font-size:.95rem }
+    .hero{ padding:clamp(2rem,6vw,3rem) 1rem }
+    .hero h1{ font-size:clamp(1.6rem,4.5vw,2.4rem); line-height:1.15; margin:0 0 .75rem; font-weight:600 }
+    .muted{ color:var(--muted) }
+
+    /* Grid */
+    .grid{ display:grid; grid-template-columns:repeat(12,1fr); gap:var(--grid-gap) }
+    .card{ grid-column:span 12; position:relative; overflow:hidden; border-radius:14px; border:1px solid color-mix(in oklab, var(--text) 9%, transparent); background: color-mix(in oklab, var(--bg) 96%, transparent) }
+    .thumb{ width:100%; aspect-ratio:4/3; object-fit:cover; display:block; -webkit-user-drag:none; user-drag:none; pointer-events:none }
+    .cap{ position:absolute; inset:auto 0 0 0; padding:.7rem .9rem; font-size:.95rem; color:#fff; background:linear-gradient(to top, rgba(0,0,0,.55), transparent 65%); opacity:0; transform:translateY(4px); transition:.25s ease }
+    .card:hover .cap{ opacity:1; transform:translateY(0) }
+    @media(min-width:640px){ .sm-4{ grid-column:span 4 } .sm-6{ grid-column:span 6 } .sm-8{ grid-column:span 8 } }
+
+    /* Section titles */
+    h2{ font-size:clamp(1.2rem,3.2vw,1.6rem); margin:0 0 .75rem; font-weight:600 }
+
+    /* Lightbox */
+    .lightbox{ position:fixed; inset:0; background:rgba(0,0,0,.92); display:none; align-items:center; justify-content:center; z-index:50; padding:1rem }
+    .lightbox.open{ display:flex }
+    .viewer{ position:relative; max-width:min(96vw,1200px); max-height:86vh; width:100% }
+    .viewer img, .viewer video{ width:100%; height:auto; max-height:86vh; display:block; border-radius:12px; background:#000 }
+    .controls{ position:absolute; inset:auto 0 0 0; display:flex; justify-content:space-between; align-items:center; gap:.5rem; padding:.5rem 0 }
+    .btn{ appearance:none; border:none; background:rgba(255,255,255,.1); color:#fff; padding:.6rem .9rem; border-radius:999px; cursor:pointer; backdrop-filter:blur(6px) }
+    .btn:hover{ background:rgba(255,255,255,.18) }
+    .close{ position:absolute; top:-44px; right:0 }
+
+    footer{ border-top:1px solid color-mix(in oklab, var(--text) 10%, transparent); margin-top:2rem }
+    .foot{ display:flex; justify-content:space-between; padding:1.25rem 1rem; max-width:var(--maxw); margin:0 auto; font-size:.95rem; color:var(--muted) }
+
+    /* Anti-téléchargement (limitatif) */
+    body.no-save img, body.no-save video{ -webkit-touch-callout:none; -webkit-user-select:none; user-select:none }
+  </style>
+</head>
+<body class="no-save">
+  <header>
+    <div class="nav">
+      <a class="brand" href="index.html">Lyndavisuals <small>— Photo & Vidéo</small></a>
+      <nav>
+        <a href="index.html#works">Travaux</a>
+        <a href="video.html" style="display:none">Vidéos</a>
+        <a href="about.html" style="display:none">À propos</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="evenementiel.html" aria-current="page" style="font-weight:600">Événementiel</a>
+        <a href="sport.html">Sport</a>
+        <a href="streetwear.html">Streetwear</a>
+        <a href="clients.html">Sélection clients</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <h1>Événementiel</h1>
+      <p class="muted">Projets capturant l'énergie des expériences live. Rubrique ci-dessous : <strong>ADIDAS — Believe That</strong>.</p>
+    </section>
+
+    <!-- RUBRIQUE / PROJET -->
+    <section class="container" aria-labelledby="adidas-title">
+      <h2 id="adidas-title">ADIDAS — Believe That</h2>
+      <div class="grid">
+        <!-- Mini-intro -->
+        <div class="card sm-12" style="grid-column:span 12; padding:1rem 1.1rem;">
+          <p class="muted">Série photo & vidéo. Direction photo/vidéo : Lyndavisuals. Sélection d’images et un extrait vidéo en lightbox.</p>
+        </div>
+
+        <!-- Photos (thumbnails → lightbox) -->
+        <a class="card sm-6 lightbox-link" href="#" data-type="image" data-src="assets/DSC04923.jpg" aria-label="Ouvrir DSC04923.jpg">
+          <img class="thumb" src="assets/DSC04923.jpg" alt="ADIDAS Believe That — visuel 1" loading="lazy" decoding="async" />
+          <span class="cap">ADIDAS — Visuel 1</span>
+        </a>
+        <a class="card sm-6 lightbox-link" href="#" data-type="image" data-src="assets/DSC04939.jpg" aria-label="Ouvrir DSC04939.jpg">
+          <img class="thumb" src="assets/DSC04939.jpg" alt="ADIDAS Believe That — visuel 2" loading="lazy" decoding="async" />
+          <span class="cap">ADIDAS — Visuel 2</span>
+        </a>
+        <a class="card sm-4 lightbox-link" href="#" data-type="image" data-src="assets/DSC04954.jpg" aria-label="Ouvrir DSC04954.jpg">
+          <img class="thumb" src="assets/DSC04954.jpg" alt="ADIDAS Believe That — visuel 3" loading="lazy" decoding="async" />
+          <span class="cap">ADIDAS — Visuel 3</span>
+        </a>
+        <a class="card sm-8 lightbox-link" href="#" data-type="image" data-src="assets/DSC04983.jpg" aria-label="Ouvrir DSC04983.jpg">
+          <img class="thumb" src="assets/DSC04983.jpg" alt="ADIDAS Believe That — visuel 4" loading="lazy" decoding="async" />
+          <span class="cap">ADIDAS — Visuel 4</span>
+        </a>
+        <a class="card sm-6 lightbox-link" href="#" data-type="image" data-src="assets/DSC04991.jpg" aria-label="Ouvrir DSC04991.jpg">
+          <img class="thumb" src="assets/DSC04991.jpg" alt="ADIDAS Believe That — visuel 5" loading="lazy" decoding="async" />
+          <span class="cap">ADIDAS — Visuel 5</span>
+        </a>
+        <a class="card sm-6 lightbox-link" href="#" data-type="image" data-src="assets/DSC04995.jpg" aria-label="Ouvrir DSC04995.jpg">
+          <img class="thumb" src="assets/DSC04995.jpg" alt="ADIDAS Believe That — visuel 6" loading="lazy" decoding="async" />
+          <span class="cap">ADIDAS — Visuel 6</span>
+        </a>
+        <a class="card sm-12 lightbox-link" href="#" data-type="image" data-src="assets/DSC05036.jpg" aria-label="Ouvrir DSC05036.jpg">
+          <img class="thumb" src="assets/DSC05036.jpg" alt="ADIDAS Believe That — visuel 7" loading="lazy" decoding="async" style="aspect-ratio:16/9" />
+          <span class="cap">ADIDAS — Visuel 7</span>
+        </a>
+
+        <!-- Vidéo en lightbox (vignette) -->
+        <a class="card sm-12 lightbox-link" href="#" data-type="video" data-src="assets/mta-adidas v4 finale.mp4" aria-label="Lire la vidéo ADIDAS">
+          <img class="thumb" src="assets/DSC04923.jpg" alt="Aperçu vidéo — ADIDAS Believe That" loading="lazy" decoding="async" style="aspect-ratio:16/9; filter:brightness(.9)" />
+          <span class="cap">Regarder la vidéo</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox modal -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" aria-label="Visionneuse">
+    <div class="viewer" role="dialog" aria-modal="true">
+      <button class="btn close" id="lb-close" aria-label="Fermer">✕</button>
+      <div id="lb-content"></div>
+      <div class="controls">
+        <button class="btn" id="lb-prev" aria-label="Précédent">←</button>
+        <button class="btn" id="lb-next" aria-label="Suivant">→</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="foot">
+      <span>© <span id="year"></span> Lyndavisuals</span>
+      <a href="mentions.html">Mentions légales</a>
+    </div>
+  </footer>
+
+  <script>
+    // Année
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Anti-clic droit / anti-glisser (limitatif)
+    document.addEventListener('contextmenu', e => {
+      if(e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO') e.preventDefault();
+    });
+    document.addEventListener('dragstart', e => {
+      if(e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO') e.preventDefault();
+    });
+
+    // Lightbox
+    const links = [...document.querySelectorAll('.lightbox-link')];
+    const lb = document.getElementById('lightbox');
+    const lbContent = document.getElementById('lb-content');
+    const btnPrev = document.getElementById('lb-prev');
+    const btnNext = document.getElementById('lb-next');
+    const btnClose = document.getElementById('lb-close');
+    let index = -1;
+
+    function openAt(i){
+      index = i;
+      const el = links[i];
+      const type = el.dataset.type;
+      const src = el.dataset.src;
+      lbContent.innerHTML = '';
+      if(type === 'image'){
+        const img = new Image();
+        img.src = src;
+        img.alt = el.querySelector('img')?.alt || '';
+        img.decoding = 'async';
+        img.style.maxHeight = '86vh';
+        lbContent.appendChild(img);
+      } else if(type === 'video'){
+        const v = document.createElement('video');
+        v.src = src;
+        v.controls = true;
+        v.autoplay = true;
+        v.style.maxHeight = '86vh';
+        lbContent.appendChild(v);
+      }
+      lb.classList.add('open');
+      lb.setAttribute('aria-hidden', 'false');
+    }
+    function close(){ lb.classList.remove('open'); lb.setAttribute('aria-hidden','true'); lbContent.innerHTML=''; }
+    function prev(){ openAt((index - 1 + links.length) % links.length); }
+    function next(){ openAt((index + 1) % links.length); }
+
+    links.forEach((a,i)=>a.addEventListener('click', e=>{ e.preventDefault(); openAt(i); }));
+    btnClose.addEventListener('click', close);
+    btnPrev.addEventListener('click', prev);
+    btnNext.addEventListener('click', next);
+    document.addEventListener('keydown', e=>{
+      if(!lb.classList.contains('open')) return;
+      if(e.key==='Escape') close();
+      if(e.key==='ArrowLeft') prev();
+      if(e.key==='ArrowRight') next();
+    });
+    lb.addEventListener('click', e=>{ if(e.target===lb) close(); });
+  </script>
+</body>
+</html>
